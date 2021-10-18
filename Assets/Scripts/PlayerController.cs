@@ -43,4 +43,10 @@ public class PlayerController : MonoBehaviour
             enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
         }
     }
+
+    IEnumerator PowerupCountdownRoutine() 
+    {
+        yield return new WaitForSeconds(7);
+        hasPowerup = false;
+    }
 }
